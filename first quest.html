@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First quest</title>
+    <style>
+        body{
+            background:url(desertt.png)no-repeat;
+        }
+        .all{
+            display: grid;
+            grid-template-areas: 
+            ".main .main"
+            ".varietes .varietes"
+            ".varietes .varietes";
+        }
+        .main{
+            text-align:center;
+            max-width:300px;
+            padding:65px;
+            background:rgba(143, 96, 206, 0.932);
+            
+            margin:75px auto auto;
+            transform:translateY(100%);
+            color:rgba(221, 154, 76, 0.932);
+            border:4mm;
+            border-color:#5bcc87;
+            border-radius: 20px;
+            display: grid;
+        }
+        .varietes{
+            display: grid;
+            color:ghostwhite;
+            text-align: center;
+            padding:30px;
+            background:rgba(221, 154, 76, 0.932);
+            font-size: larger;
+            
+            transform:translateY(100%);
+            color:rgba(78, 107, 233, 0.925);
+            border:4mm;
+            border-color:#5bcc87;
+            border-radius: 20px;
+        }
+
+        .first{
+            margin:175px auto auto;
+        }
+        .second{
+            margin:100px auto auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+    <article class="main article">О ХХХ ходили разные легенды, но все точно знали – именно он создал ИИ, который смог во многом превзойти человека. Также не подвергалось сомнению его творение – книга, которая включала в себя весь его опыт, знания накопленные за долгие годы жизни.</article>
+    <article class="varietes first">далее</article>
+    <article class="varietes second">далее</article>
+    </div>
+    <script>
+        let first = document.querySelector(".first");
+        let second = document.querySelector(".second");
+        let main = document.querySelector(".main");
+
+        first.addEventListener("click", func1);
+        second.addEventListener("click", func1);
+        function func1(){
+            main.innerHTML="Будильник зазвонил в который раз, пора было идти в университет";
+            first.innerHTML="Взять книги с собой";
+            second.innerHTML="Позаботиться о спине, пойти налегке";
+            removeEventListener;
+
+            first.addEventListener("click", func2);
+            second.addEventListener("click", func2);
+            function func2(){
+                main.innerHTML="По дороге к университету меня позвал Тема – мой хороший знакомый";
+                first.innerHTML="Поздороваться с другом, идти вместе";
+                second.innerHTML="Поздороваться, уйти при первой возможности"
+                removeEventListener;
+
+                first.addEventListener("click", func3);
+                second.addEventListener("click", func3);
+                function func3(){
+                    main.innerHTML="Университет представлял собой большое современное здание, которое выделялось на фоне остальных построек новейшими технологиями: от видеокамер до квантового компьютера, который занимал большую часть одного из помещений.";
+                    first.innerHTML="Зайти в университет";
+                    second.innerHTML="Зайти в университет";
+                    removeEventListener;
+
+                    first.addEventListener("click", func4);
+                    second.addEventListener("click", func4);
+                    function func4(){
+                        main.innerHTML="В помещении толпились люди, все двигались к нужным аудиториям, со стороны действо напоминало муравейник. Вдруг за руку меня схватил один из студентов, присмотревшись, я узнал в нем Витю – отличника, по совместительству (моего единственного друга/моего хорошего друга) – в зависимости от прошлого выбора, который всегда мог придумать занятие для себя и окружающих. Сейчас он тащил меня на урок истории технологического прогресса. Практического смысла данное мероприятие не имело, но интересные факты и полезная информация подкупали мою любознательность. Это была огромная аудитория, урок вел Валентин Борисович";
+                        first.innerHTML="Занять первую парту";
+                        second.innerHTML="сесть в конце аудитории";
+                        removeEventListener;
+
+                        first.addEventListener("click", func51);
+                        second.addEventListener("click", func52);
+                        function func51(){
+                            main.innerHTML="Лекция была о искуственном интелекте, его зарождении. В списке программистов, сделавших открытия в данной теме я заметил знакомое имя - ХХХ.  Я услышал рассказ о самых известных програмистах того времени, где мой знакомый играл не последнюю роль. Валентин Борисович с жаром говорил о книге, которая хранила все мысли и идеи ХХХ, позволяла стать одним из передовых программистов просто прочитав её";
+                            first.style.opacity="-1";
+                            second.innerHTML="дальше";
+                            removeEventListener;
+
+                            second.addEventListener("click", func5);
+                        }
+                        function func52(){
+                            main.innerHTML="Лекция была о искуственном интелекте, его зарождении. В списке программистов, сделавших открытия в данной теме я заметил знакомое имя - ХХХ.  Профессор говорил что-то о достижениях в IT, людях принимавших непосредственное участие, Валентин Борисович с жаром говорил о какой-то книге, которая давала владельцу знания великого программиста, больше ничего услышать не удалось, стоило садиться ближе";
+                            first.style.opacity="-1";
+                            second.innerHTML="дальше";
+                            removeEventListener;
+
+                            second.addEventListener("click", func5);
+                        }
+
+                        function func5(){
+                            main.innerHTML="Выйдя из аудитории Тёма с Витей начали обсуждать возможности, которые давала книга, способы её применения.Через несколько минут они обратились ко мне - ‹как бы её использовал ты?›";
+                            first.style.opacity="1";
+                            first.innerHTML="Чем-то она явно полезна, только где её взять?";
+                            second.innerHTML="Вряд-ли человек, который уже умер имел информацию, которая будет полезна сейчас";
+                            removeEventListener;
+
+                            first.addEventListener("click", func61);
+                            second.addEventListener("click", func62);
+                            function func61(){
+                                first.innerHTML="Я предложил пойти в библиотеку, поискать информацию там. По пути мы встретили Валентина Борисовича, решили всё-таки спросить его о интересующей нас теме. Здесь ничего нет";
+                                second.innerHTML="Мне показалось, что Валентин Борисович интересуется этой темой, может рассказать куда больше, чем на лекции. Стоит найти его и распросить";
+                                removeEventListener;
+
+                                second.addEventListener("click", func621);
+                                first.addEventListener("click", func63);
+                            }
+                            function func621(){
+                                main.innerHTML="Перед нами стоял мужчина в возрасте, имевший проницательный и спокойный взгляд. здесь ничего нет";
+                                first.innerHTML="Поздароваться, задать интересующий вопрос";
+                                second.innerHTML="Поздароваться, начать из далека, постепенно подойти к интересующиму вопросу. ВБ начал более детально говорить о материале лекции, я начал интересующий вопрос";
+                                removeEventListener;
+                                
+
+                                first.addEventListener("click",func7);
+                                second.addEventListener("click",func7);
+                            }
+                            function func62(){
+                                main.innerHTML="Витя всё-таки уговорил меня подойти к Валентину Борисовичу, который может рассказать что-то. Перед нами стоял мужчина в возрасте, имевший проницательный и спокойный взгляд. здесь ничего нет";
+                                first.innerHTML="Поздароваться, задать интересующий вопрос";
+                                second.innerHTML="Поздароваться, начать из далека, постепенно подойти к интересующиму вопросу. ВБ начал более детально говорить о материале лекции, я начал интересующий вопрос";
+                                removeEventListener;
+
+                                first.addEventListener("click",func7);
+                                second.addEventListener("click",func7);
+                            }
+                            function func63(){
+                                main.innerHTML="здесь ничего нет";
+                                first.innerHTML="Поздароваться, задать интересующий вопрос";
+                                second.innerHTML="Поздароваться, начать из далека, постепенно подойти к интересующиму вопросу. ВБ начал более детально говорить о материале лекции, я начал интересующий вопрос";
+                                removeEventListener;
+
+                                first.addEventListener("click", func7);
+                                second.addEventListener("click", func7);
+                            }
+
+                            function func7(){
+                                main.innerHTML="После моего вопроса глаза профессора загорелись. Данное ответвление темы похоже интересовало не только нас, но и ВБ. Говорил он долго и быстро, какую-то часть речи я вообще не понял, но основная мысль была такова - «а вот фиг его знает, нужно будет красиво описать»";
+                                first.innerHTML="Поблагодарить профессора и уйти";
+                                second.innerHTML="Задать еще несколько отстраненных от темы вопросов, уйти";
+                                removeEventListener;
+
+                                first.addEventListener("click",func8);
+                                second.addEventListener("click",func8);
+
+                                function func8(){
+                                    main.innerHTML="Витю с Темой явно заинтересовала эта книга, да и мне если честно стало интересно что мог написат великий программист. Углубившись в мысли я и не заметил как рядом со мной разгорелся спор. Мои друзья с большим энтузиазмом пытались перебить друг друга, предложить идею получения книги. Вариант Вити был прост - забрать книгу из здания, сделать копию и вернуть оригинал на место. Идея Вити была была сложнее: устроитьс - устроиться в компанию, которая имела книгу, получить должность, позволяющая читать книгу. Оба варианта можно было назвать безумными: украсть что-то в троем, так еще и без подготовки?! Устроиться работать в компанию тоже сложно - зачем кому-то три студента, которые даже не закончили университет. Но при должном везении осуществить можно было любую из двух идей. Всё это я высказал друзьям, сошлись на том, что обсудим всё завтра. Сейчас- же нас ждало ещё несколько пар.";
+                                    first.innerHTML="Идти на занятия";
+                                    second.innerHTML="Я продуктивно поработал, пора дать себе перерыв. Иду домой!";
+                                    removeEventListener;
+
+                                    first.addEventListener("click",func9);
+                                    second.addEventListener("click",func9);
+                                    function func9(){
+                                        main.innerHTML="Этот день от других отличало только одно - мысль о книге, которая не отпускала меня";
+                                        first.innerHTML="далее";
+                                        second.innerHTML="дальше";
+                                        removeEventListener;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
